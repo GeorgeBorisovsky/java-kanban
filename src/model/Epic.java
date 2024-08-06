@@ -3,26 +3,30 @@ package model;
 import java.util.ArrayList;
 
 public class Epic extends Task {
-    final private ArrayList<Subtask> subtaskArray = new ArrayList<>();
+    private ArrayList<Integer> subtaskIdArray = new ArrayList<>();
 
     public Epic(String name, String description, Status status, Type type) {
         super(name, description, status, type);
     }
 
-    public void addSubtask(Subtask subtask){
-        subtaskArray.add(subtask);
+    public void addSubtaskId(int subtaskId){
+        subtaskIdArray.add(subtaskId);
     }
 
 
-    public ArrayList<Subtask> getSubtaskArray() {
-        return subtaskArray;
+    public ArrayList<Integer> getSubtaskIdArray() {
+        return subtaskIdArray;
+    }
+
+    public void setSubtaskIdArray(ArrayList<Integer> subtaskIdArray) {
+        this.subtaskIdArray = subtaskIdArray;
     }
 
     public void clearSubtaskArray() {
-        subtaskArray.clear();
+        subtaskIdArray.clear();
     }
 
-    public void deleteSubtaskArray(Integer idSubtask) {
-        subtaskArray.remove(idSubtask);
+    public void removeEpicSubtask(Integer idSubtask) {
+        subtaskIdArray.remove(idSubtask);
     }
 }

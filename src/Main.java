@@ -39,8 +39,7 @@ public class Main {
         taskManager.addNewEpic(testepic);
 
 
-        taskManager.updateEpicStatus(3);
-        System.out.println();
+
         // печать всех задач
         System.out.println("печать всех задач" + taskManager.printAllTasks());
         System.out.println("печать всех эпиков" + taskManager.printAllEpics());
