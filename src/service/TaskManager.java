@@ -50,6 +50,7 @@ public class TaskManager {
 
             int epicId = subtask.getEpicId();
             epicMap.get(epicId).addSubtaskId(subtaskId);
+            updateEpicStatus(epicId);
 
         }
     }
@@ -75,7 +76,6 @@ public class TaskManager {
             }
             epic1.setName(epic.getName());
             epic1.setDescription(epic.getDescription());
-            epic1.setSubtaskIdArray(epic.getSubtaskIdArray());
         }
     }
 
